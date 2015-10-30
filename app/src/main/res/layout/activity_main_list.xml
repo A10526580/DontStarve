@@ -1,119 +1,107 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainList">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainList"
+    android:weightSum="1"
+    android:background="@drawable/note_background">
 
-    <LinearLayout
-        android:orientation="vertical"
+
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:layout_above="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:layout_alignParentTop="true">
+        android:layout_height="25dp"
+        android:layout_weight="0.18" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="26dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">
-
-        <TextView android:text="@string/list_title" android:layout_width="match_parent"
-            android:layout_height="200px"
-            android:id="@+id/textView"
-            android:textSize="@dimen/abc_text_size_headline_material"
-            android:textColor="#2e2e2e"
-            android:textColorHighlight="#1082f3" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:password="false"
+        android:text="        DONT STARVE TODAY"
+        android:layout_weight="0.04"
+        android:paddingTop="10px" />
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="200px"
-        android:id="@+id/"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.77">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="1dp"
-            android:minHeight="100px">
+            android:layout_marginTop="0dp" >
 
             <CheckBox
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox3"
-                android:layout_column="7" />
+                android:layout_width="80px"
+                android:layout_height="90px"
+                android:id="@+id/checkBox2" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Sugar"
+                android:id="@+id/textView2"
+                android:layout_column="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp">
+
+            <CheckBox
+                android:layout_width="80px"
+                android:layout_height="90px"
+                android:id="@+id/checkBox" />
+
+            <TextView
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Sugar"
+                android:id="@+id/Sugar"
+                android:layout_column="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp" >
+
+            <CheckBox
+                android:layout_width="80px"
+                android:layout_height="90px"
+                android:id="@+id/checkBox4" />
+
+            <TextView
+                android:layout_width="200px"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Sugar"
                 android:id="@+id/textView4"
-                android:layout_column="8" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox2"
-                android:layout_column="7" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Bread"
-                android:id="@+id/textView3"
-                android:layout_column="6" />
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/">
+            android:layout_marginTop="0dp" >
 
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox"
-                android:layout_column="7" />
+                android:layout_width="80px"
+                android:layout_height="90px"
+                android:id="@+id/checkBox3" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200px"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Milk"
-                android:id="@+id/textView2"
-                android:layout_column="6" />
-
+                android:text="Sugar"
+                android:id="@+id/textView3"
+                android:layout_column="1" />
         </TableRow>
     </TableLayout>
-
-
-
-</RelativeLayout>
+</LinearLayout>
